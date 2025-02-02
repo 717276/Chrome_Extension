@@ -1,12 +1,13 @@
 {
     "name": "Data Checker Extension",
     "version": "1.0",
-    "manifest_version": 3,
+    "manifest_version": 2,
     
     "permissions": ["scripting", "activeTab", "storage","tabs"],
     "host_permissions": [ "https://www.saramin.co.kr/zf_user/jobs/*",  "https://www.jobkorea.co.kr/Recruit/*" ],
     "background": {
-      "service_worker": "background.js"
+      "scripts": ["background.js"],
+      "persistent": true 
     },
     "content_scripts": [
       {
